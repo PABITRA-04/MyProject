@@ -71,19 +71,44 @@
             weekday[0] = "Sunday";
             weekday[1] = "Monday";
             weekday[2] = "Tuesday";
-            weekday[3] = "Wed";
+            weekday[3] = "Wednesday";
             weekday[4] = "Thursday";
             weekday[5] = "Friday";
             weekday[6] = "Saturday";
 
             let currentTime = new Date();
             days = weekday[currentTime.getDay()];
-            let day = document.getElementById('day');
+            let day = document.getElementById('day'); 
 
             day.innerText = days;
         };
+         const getCurrentmonth = ()=>{
+       let months = [
+           "Jan",
+           "Fav",
+           "Mar",
+           "Apr",
+           "May",
+           "Jun",
+           "July",
+           "Aug",
+           "Sep",
+           "Oct",
+           "Nov",
+           "Dec",
 
+       ];
+         let m = new Date();
+         dates = months[m.getMonth()];
+         
+         let d = document.getElementById('today_data');
+         d.innerText= dates;
+         
+           
+         };
+        getCurrentmonth();
         getCurrentDay();
+        
     </script>
 </body>
 
