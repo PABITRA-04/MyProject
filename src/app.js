@@ -2,6 +2,7 @@ const express = require ("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
+const port = process.env.PORT || 8000;
 
 const static_path = path.join(__dirname,"../public");
 const templet_path = path.join(__dirname,"../src/templets/views");
@@ -30,7 +31,7 @@ app.get("*",(req,res)=>{
 });
 
 
-app.listen(8000,()=>{
+app.listen(port,()=>{
     console.log("welcome");
 }
 );
